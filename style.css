@@ -1,0 +1,35 @@
+// @media 뒤에 매체를 입력하지 않으면 all타입 다 미디어쿼리로 입력됨
+
+
+@media (max-width:600px){  
+    .cellphone{
+
+    }
+}
+
+@media screen(min-width:600px) and (max-width :992px){
+    .taplet{
+
+    }
+}
+
+@media (min-width:992px){
+    .desktop
+}
+
+@media (orientation:landscape){ //가로형일때
+    body{
+        display : flex;
+    }
+
+}
+
+@media (orientation:portrait){ //세로형일때
+
+}
+
+@media print { //인쇄용 버전
+    body{
+        color:purple
+    }
+}
