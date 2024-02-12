@@ -49,8 +49,16 @@ body {
     margin : 50px;
 }
 
-@media (max-width: 300px) {
-    body {background-size: contain;}
+@media (max-width: 48rem) {
+
+
+    .top {
+      font-size:10vw;
+    }
+
+    .mid {
+      font-size:6vw;
+    }
     .container {
       margin-top: 20px;
     }
@@ -58,9 +66,9 @@ body {
       margin-bottom: 10px;
     }
     #play-button, #reset-button {
-      margin-bottom: 10px;
+      font-size: 3vw;
+      width: 80px;
+      height: 60px;
     }
-    .container {padding: 50px;
-        margin : 50px;
-    }
+    
   }
