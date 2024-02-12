@@ -3,10 +3,12 @@ let playButton = document.getElementById("play-button");
 let userInput =document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
-let chances = 10;
+let chances = 5;
 let gameOver = false;
 let chanceArea = document.getElementById("chances-area");
 let history = [];
+let correctAnswerImage = document.getElementById("correctAnswerImage");
+let defaultImage = document.getElementById("defaultImage");
 
 playButton.addEventListener("click", play);
 resetButton.addEventListener("click", reset);
@@ -43,9 +45,10 @@ function play(){
         resultArea.textContent = "DOWN"
      
     } else {
-        resultArea.textContent = "정답입니다";
-        gameOver =true
-        
+        resultArea.textContent = "정답 선물이야 !! ";
+        gameOver =true;
+        defaultImage.classList.add("hidden");
+        correctAnswerImage.classList.remove("hidden");
     }
 
     history.push(userValue)
@@ -63,9 +66,16 @@ function play(){
 function reset(){
     userInput.value = "";
     pickRandomNum();
-    resultArea.textContent = "1부터 100까지의 숫자 중 하나를 골라 적어봐"
-    chanceArea.textContent = `남은 기회 : 10회`;
-
+    resultArea.textContent = "정답을 맞히면 선물을 줄게"
+    chanceArea.textContent = `남은 기회 : 5회`;
+    gameOver = false;
+    playButton.disabled = false;
+    chances = 5;
+    history = [];
+    defaultImage.classList.remove("hidden");
+    correctAnswerImage.classList.add("hidden");
 }
+
+
 
 pickRandomNum();

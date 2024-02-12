@@ -1,35 +1,66 @@
-// @media 뒤에 매체를 입력하지 않으면 all타입 다 미디어쿼리로 입력됨
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://d2v80xjmx68n4w.cloudfront.net/gigs/rate/1eLZa1668135914.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'gothic';
+    color:midnightblue;
+}
 
+.top {
+   
+    padding-bottom: 10px;
+}
 
-@media (max-width:600px){  
-    .cellphone{
+.mid {
+    margin-top: 20px;
+}
 
+.hidden {
+    display: none;
+}
+
+.hidden2 {
+    display: none;
+}
+
+.input-box {
+    width: 200px;
+    height: 30px;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    padding-left: 20px;
+    padding-right: 5px;
+    font-size: 12px;
+
+}
+
+.container {
+    border: 5px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(247, 243, 242, 0.7);
+    padding: 50px;
+    margin : 50px;
+}
+
+@media (max-width: 300px) {
+    body {background-size: contain;}
+    .container {
+      margin-top: 20px;
     }
-}
-
-@media screen(min-width:600px) and (max-width :992px){
-    .taplet{
-
+    .input-box {
+      margin-bottom: 10px;
     }
-}
-
-@media (min-width:992px){
-    .desktop
-}
-
-@media (orientation:landscape){ //가로형일때
-    body{
-        display : flex;
+    #play-button, #reset-button {
+      margin-bottom: 10px;
     }
-
-}
-
-@media (orientation:portrait){ //세로형일때
-
-}
-
-@media print { //인쇄용 버전
-    body{
-        color:purple
+    .container {padding: 50px;
+        margin : 50px;
     }
-}
+  }

@@ -6,17 +6,30 @@
     <title>Drink Game :-D</title>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-  </head>
+    </head>
   <body>
 
+    <div class="container">
 
-    <h1>숫자 맞추기 게임</h1>
-    <div id = "result-area">1부터 100까지의 숫자 중 하나를 골라 적어봐</div>
-    <div id = "chances-area">남은 기회 : 10회 </div>
-    <input type="number" id="user-input"/>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button id = "play-button">가보자고</button>
-    <button id = "reset-button">다시할게</button>
+      <h1 class="top">숫자 맞추기 게임</h1>
+      <div id="resultImage">
+        <img src="jinro.png" id="defaultImage" width=150px alt="정답을 맞춰봐">
+        <img src="IMG_9340.jpg" id="correctAnswerImage" class="hidden" width=150px alt="정답 선물">
+      </div>
+    
+      <p class="mid" id = "result-area">정답을 맞히면 선물을 줄게</p>
+      <p id = "chances-area">남은 기회 : 5회 </p>
+      
+      <p>
+        <input type="number" id="user-input" class="input-box" placeholder="1~100사이의 숫자를 입력해"/>
+      </p>
+      
+      <p>
+        <button type="button" id="play-button" class="btn btn-outline-secondary">가보자고</button>
+        <button type="button" id="reset-button" class="btn btn-outline-secondary">다시할게</button>
+      </p>
+      
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
